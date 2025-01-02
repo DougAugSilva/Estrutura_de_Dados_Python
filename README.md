@@ -1,4 +1,4 @@
-# Peincipais Estruturas de Dados em Python
+# Principais Estruturas de Dados em Python
 ## Introdução
 Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
 - Vetores ordenados e não ordenados
