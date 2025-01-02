@@ -21,9 +21,40 @@ Vetores não ordenados são uma estrutura de dados que armazena dados sem uma or
 Tais aspectos ficarão mais evidentes nas aplicações em Python.
 
 ### Definido a Classe
+Primeiro vamos importar a biblioteca *numpy* para podermos defeirni mais facilmente o vetor. Começamos definidno a classe na qual o objeto `VetorNaoOrdenado` irá fazer parte, com isso podemos adicionar a capacidade do vetor, definir um ponteiro para a leitura de seus dados e os valores em suas entradas, neste exemplo vamos defeinir somente valores do tipo `int` para as entradas.
+```python
+import numpy as np   #importa a biblioteca numpy
 
-### Allgoritmo de Impreção
-...
+class VetorNaoOrdenado:  #define a classe de vetor não ordenado
+    def __init__(self, capacidade):  
+        self.capacidade = capacidade  #capacidade de armazenamento do vetor
+        self.ultima_posicao = -1  #define o ponteiro de leitura das entradas do vetor
+        self.valores = np.empty(self.capacidade, dtype = int)  #define os tipos de entradas do vetor
+```
+### Função de Inserção
+A primeira função que vamos definir para trabalha com o nosso vetor é a inserção, com elas podemos inserir novos valores ao vetor, neste caso a ordem de inserção não importa, sendo assim mais simples quie a função de inserção no case dos vetores ordenados. 
+```python
+def insere(self, valor): #definindo a função
+        if self.ultima_posicao == self.capacidade -1:
+            print("Capacidade máxima atingida") #caso o vetor esteja coimpleto
+        else:
+            self.ultima_posicao +=1  #move o ponteiro nas entradas do vetor
+            self.valores[self.ultima_posicao] = valor
+```
+Note que inclui um detector caso o vetor esteja com todas as suas entradas já preenchidas com valores. Deste modo, para inserirmos o número 5 agora por exemplo, basta digitarmos `vetor.insere(5)`.
+
+### Função de Pesquisa
+Esta é a função mais custosa no sentido computacional, dado que não existe uma ordem explicita na organização dos elementos do vetor, a unica forma de pesquisa que podemos aplicar é a *pesquisa linear*, sendo preciso checar entrada a entrada do vetor para encontrar o item a ser pesquisado, e ainda, caso seja permitido itens repetidos no vetor, a pesquisa deve percorrer **Todas** as entradas do vetor. Definimos esta função pelo comando abaixo:
+```python
+def pesquisar(self, valor): #definindo a função 
+      for i in range(self.ultima_posicao + 1): #define a posição inicial do ponteior de leitura do vetor
+        if valor == self.valores[i]:
+           return i  #caso o elemento exista ele retorna o elemento
+      return -1  #caso o elemento não exista no vetor
+```
+neste exemplo do vetor com entradas sendo números inteiros positvos, temos que caso o item pesquisado não esteja presente no vetor, retornamos o valor negatio -1, o motico pelo qual foi escolhido -1 no lugar de uma string dizendo `"valor não encontrado"` ficará mais evidente adiante.
+
+##Função de Exclusão
 
 ## Vetores Ordenados
 Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são armazenados em uma ordem específica pré definida, possuindo assim carateristicas particulares quanto a sua manipulação:
@@ -34,5 +65,9 @@ Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são
 Novamente vamos definir e implementar os algoritmos de manipulação dessa estrutura de dados.
 
 ### Definido a Classe
+
+
+
+
 
 
