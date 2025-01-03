@@ -233,7 +233,7 @@ Pilhas são um aestruturas de dados com um acesso diferente aos seu itnes, ele p
 - Percorrimento de uma árvore binária
 - Arquitetura de microprocessadores
 
-Ecistemm operações que podemos realkizar na manipulação de pilhas, como por exemplo:
+As operações que podemos realizar na manipulação de pilhas que serão abordadas aqui são:
 - Empilhar: Colocar um item de dados mo topo da pilha
 - Desempuilhar: Remover um item de dados do topo da pilha
 - Ver o Topo: Mostar o elemento que está no topo da pilha.
