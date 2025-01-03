@@ -201,7 +201,7 @@ def excluir(self,valor):
         self.valores[i] = self.valores[i +1]  #caso exista, realiza o remanejamento dos valores
       self.ultima_posicao -= 1   #decrementa o valor das posições (diminui o tamanho do vetor)
 ```
-## Comparando Vetores Ordenados e Não Ordenados
+### Comparando Vetores Ordenados e Não Ordenados
 Estas estrurturas e dados embora semelhantes, possuem suas devidas recomendações para tipos específicos de aplicações, em resunmo temos que: 
 - Vetores **não ordenados** são mais recomendados para aplicações em que temos muitas inserções de novos dados no sistemas, mas poucas buscas. Por exemplo o cadastro de preço de itens em um sistema de um supermercado.
 - Vetordes **ordenaos** são recomendados para aplicações onde temos muitas buscas nos sistemas, mas pouca inserção de novos dados, por exemplo um banco de dados com cadastros de novos funcionários.
