@@ -1,14 +1,15 @@
 # P.O.O com Vetores Ordenados e <br/> Não Ordenados em Python
 
 ## Introdução
-Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
-- Vetores ordenados e não ordenados
-- Pilhas, filas e deques
-- Listas encadeadas
-- Árvores
-- Grafos
-  
-Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
+Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo ue neste repósitório será aborado:
+
+- [Vetores Não Ordenados](#Vetores-Não-Ordenados)
+- Vetores Ordenados
+- Pilhas
+- Filas
+- Deques
+
+As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
 ## Vetores Não Ordenados
 
@@ -200,7 +201,7 @@ def excluir(self,valor):
         self.valores[i] = self.valores[i +1]  #caso exista, realiza o remanejamento dos valores
       self.ultima_posicao -= 1   #decrementa o valor das posições (diminui o tamanho do vetor)
 ```
-## Comparação entre vetores ordenados e Não ordenados
+## Comparando Vetores Ordenados e Não Ordenados
 Estas estrurturas e dados embora semelhantes, possuem suas devidas recomendações para tipos específicos de aplicações, em resunmo temos que: 
 - Vetores **não ordenados** são mais recomendados para aplicações em que temos muitas inserções de novos dados no sistemas, mas poucas buscas. Por exemplo o cadastro de preço de itens em um sistema de um supermercado.
 - Vetordes **ordenaos** são recomendados para aplicações onde temos muitas buscas nos sistemas, mas pouca inserção de novos dados, por exemplo um banco de dados com cadastros de novos funcionários.
