@@ -223,3 +223,20 @@ Outra diferença importante entre estes vetores é a presença da pesquis binár
 | 1.000.000.000  | 30            | 500.000.000  |
 
 A tabele acima mostra o número de passos de cada algortimo em ralação ao compriemnto do vetor, sendo que a busca linear realiza em média *n/2* passos em um vetor com *n* entradas. Note que fica evidente que para a pesquisa binária temos *O(ln)*, equanto para a pesquisa linear *O(n)*, sendo este o principal motivo por se investir tantos recursos no desenvolvimento de algoritmos ordenação de banco de dados, a grande eficiencia na busca de valores.
+
+## Pilhas
+
+### Teoria
+Pilhas são um aestruturas de dados com um acesso diferente aos seu itnes, ele permite acesso somente ao último item inserido, sendo necessário remover este para aacessar o próximo item (no caso o penultimo item inserido), e asssim por diante. Existem várias aplicações que são utilizads pilhas, como por exemplo:
+- Correeção de expreções aritméticas
+- Pesquisa nos vértices de um gráfo
+- Percorrimento de uma árvore binária
+- Arquitetura de microprocessadores
+
+Ecistemm operações que podemos realkizar na manipulação de pilhas, como por exemplo:
+- Empilhar: Colocar um item de dados mo topo da pilha
+- Desempuilhar: Remover um item de dados do topo da pilha
+- Ver o Topo: Mostar o elemento que está no topo da pilha.
+
+Uma puilha é uma estrutura de dados do tipo *LIFO* (Last in First Out), isto é, O último elemento a ser inserido é o primeiro a elemnto a ser retirado.
+
