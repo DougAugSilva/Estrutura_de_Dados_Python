@@ -1,4 +1,5 @@
-# Principais Estruturas de Dados em Python
+# Vetores Ordenados e Não Ordenados  <br/> com P.O.O em Python (Estruturas de Dados)
+
 ## Introdução
 Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
 - Vetores ordenados e não ordenados
@@ -145,6 +146,21 @@ O algoritmo de inserção se divide em quatro partes:
 
 Caso ainda restem duvidas, recomento o debug para a execução do algoritmo passo a passo pelo compilador.
 
-### Função de Pesquisa
+### Funções de Pesquisa
 
+A grande vantagem de inserir uma relação de ordem na organização dos valores presenmtes na entradas de um vetor, é a facilidade da execução de buscas, na parte de comparação se tornará mais evidente a diferença, mas adiantando, vetores ordenados são recomendados em casos em que há muitas buscas por dados dentro do sistema, mas pouca inserção de novos dados. <br/>
+Para este tipo de vetor temos dois algoritmos de pesquisa, um semelhante oa visto para vetores não ordenados denominado *Pesquisa Linear*, e outro que se aproveita da ordenação dos elementos para uma maior eficiência computacional, chamado de *Pesquisa Binária*, amobos serão abordados agora.
 
+#### Pesquisa Linear
+A principal diferença neste tipo de pesquisa para vetores ordenados, é que não há necessidade de se verificar todas as entradas do vetor, mesmo para o caso em que são aceitos valores repetidos, pois caso cheguemos a um item maior que o valor buscado, a relação de ordem entre os elementos garante que não havera mais valores iguais a este nas posições seguintes do vetor.
+```python
+def pesquisa_linear(self, valor):
+     for i in range(self.ultima_posicao + 1):
+      if self.valores[i] > valor: 
+        return -1
+      if self.valores[i] == valor: 
+        return i
+      if i == self.ultima_posicao:
+        return -1   
+```
+#### Pesquisa Binária
