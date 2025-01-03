@@ -5,7 +5,7 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 
 - [Vetores Não Ordenados](#Vetores-Não-Ordenados)
 - [Vetores Ordenados](#Vetores-Ordenados)
-- Pilhas
+- [Pilhas](#Pilhas)
 - Filas
 - Deques
 
