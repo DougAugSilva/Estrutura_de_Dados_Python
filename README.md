@@ -91,7 +91,6 @@ Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são
 Novamente vamos definir e implementar os algoritmos de manipulação dessa estrutura de dados.
 
 ### Definido a Classe e o Objeto
-
 Para o *Vetor Ordenado*, definimos sua classe e função de impressão da mesma forma que para o *Vetor Não Ordenado*, com efeito, a diferença entre eles não se dá na definição de sua classe, nem na criação do objeto, mas sim no algoritmo de inserção de valores em suas entradas, com isso segue sua criação.
 ```python
 import numpy as np
@@ -147,7 +146,6 @@ O algoritmo de inserção se divide em quatro partes:
 Caso ainda restem duvidas, recomento o debug para a execução do algoritmo passo a passo pelo compilador.
 
 ### Funções de Pesquisa
-
 A grande vantagem de inserir uma relação de ordem na organização dos valores presenmtes na entradas de um vetor, é a facilidade da execução de buscas, na parte de comparação se tornará mais evidente a diferença, mas adiantando, vetores ordenados são recomendados em casos em que há muitas buscas por dados dentro do sistema, mas pouca inserção de novos dados. <br/>
 Para este tipo de vetor temos dois algoritmos de pesquisa, um semelhante oa visto para vetores não ordenados denominado *Pesquisa Linear*, e outro que se aproveita da ordenação dos elementos para uma maior eficiência computacional, chamado de *Pesquisa Binária*, amobos serão abordados agora.
 
@@ -164,3 +162,41 @@ def pesquisa_linear(self, valor):
         return -1   
 ```
 #### Pesquisa Binária
+A *pesquisa binária* é exclusica dos vetores ordenados, ela se aproveita da ordenação para gradativamente ir reduzindo o iontervalo de busca pela mentade, podendo assim realizar a busca de um elemento com muito mais eficiciencia do ponto de vista computacional. Implementamos ela atravéz do seguinte algoritmo:
+```python
+def pesquisa_binaria(self, valor):
+    limite_inferior = 0
+    limite_superior = self.ultima_posicao
+    while True:
+      posicao_atual = int((limite_inferior + limite_superior) / 2)
+      #caso o valor foi encontrado na primeira tentativa
+      if self.valores[posicao_atual] == valor:
+        return posicao_atual
+      #caso o valor não foi encontrado na primeira tentativa e temos
+      elif limite_inferior > limite_superior:
+        return -1
+      #caso nenhuma das condiçoies acima, vamos escolher quais intervalos ele faz parte
+      else:
+        if self.valores[posicao_atual] < valor: #caso intervalo da direita
+          limite_inferior = posicao_atual +1
+        else: #caso intervalo da esquerda
+          limite_superior = posicao_atual - 1
+```
+Novamente, podemos analisar esta função em quatro partes:
+- Primeiro definimos os extremos do intervalo de pesquisa e verificamos se o valor da pesquisa é igual, maior ou menor a média deste intervalo. Sendo que caso o valor seja igual a média, paramos a pesquisa.
+- Caso o valor seja *maior* que a média do intervalo, restringimos o intervalo de pesquisa atualizando os limites do intervalo de busca, com o novo intervalo inferior sendo a máedia dos intervlaos
+- Caso o valor seja *menor* que a média dos intervalos, rrestringimos o intervalo de pesquisa atualizando agora o limite superior como senod a média dos intervalos
+- Respetimos o processo até isolarmos nosso valor em intervalos cada vez menores, até que a média do intervalo coincida com ele.
+
+### Função de Exclusão
+Dado que a função de exlcusão depende de uma função de pesquisa, podemos criar uma função de exclusão com a pesquisa linear e outra com a pesquisa binária. para este exemplo foi escolhida com a pesquias binária, mas basta substituirmos no algoritmo `pesquisa_binária(..)` por `pesquisa_linear(...)` para mudarmos de uma para a outra, sendo que a com pesquisa binária será computacionalmente mais eficiente.
+```python
+def excluir(self,valor):
+    posicao = self.pesquisar_binaria(valor)
+    if posicao == -1:
+      return -1  #caso o item não exista no vetor, retorna -1
+    else:
+      for i in range(posicao, self.ultima_posicao):
+        self.valores[i] = self.valores[i +1]  #caso exista, realiza o remanejamento dos valores
+      self.ultima_posicao -= 1   #decrementa o valor das posições (diminui o tamanho do vetor)
+```
