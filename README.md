@@ -84,6 +84,8 @@ Aqui vemos o por que se faz útil a atribuição do -1 na pesquisa caso o elemnt
 Com isso, para excluirmo o número 5 que foi anterioirmente adicionado, basta fazermos `vetor.excluir(5)`.
 
 ## Vetores Ordenados
+
+### Teoria
 Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são armazenados em uma ordem específica pré definida, possuindo assim carateristicas particulares quanto a sua manipulação:
 - Toda vez que formos inserir um item no vetor, precisaremos fazer uma pesquisa sobre os demais itens para ainserção respeitar a ordenação do vetor.
 - O algoritmo de pesquisa não precisa necessariamente fazer a leitura de todas as entradas do vetor em todos os casos, basta ele chegar no primeiro item maior que o item a ser pesquisado.
