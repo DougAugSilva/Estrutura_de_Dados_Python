@@ -1,4 +1,4 @@
-# Vetores Ordenados e Não Ordenados  <br/> com P.O.O em Python (Estruturas de Dados)
+# P.O.O com Vetores Ordenados e <br/> Não Ordenados em Python
 
 ## Introdução
 Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
