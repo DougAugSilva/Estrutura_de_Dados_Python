@@ -55,6 +55,18 @@ def pesquisar(self, valor): #definindo a função
 neste exemplo do vetor com entradas sendo números inteiros positvos, temos que caso o item pesquisado não esteja presente no vetor, retornamos o valor negatio -1, o motico pelo qual foi escolhido -1 no lugar de uma string dizendo `"valor não encontrado"` ficará mais evidente adiante.
 
 ##Função de Exclusão
+Definida a função de pesquisa, podemos utilizar ela para remover um item de uma dada entrada do vetor, esta entrada não pode ficar "vazia" após a remoção, sendo assim precisasmos rearranjar os elementos do vetor movendo um a auma a paertir desta entrada, e depois decrementar o tamnaho do vetor. O algoritmo que implementa estra função segue abaixo:
+```python
+def excluir(self, valor): #definindo função
+      posicao = self.pesquisar(valor) #primeiro pesquisamos o item a ser excluido no vetor
+      if posicao == -1: #caso o item não exista, retorna o valor -1
+        return -1
+      else: #caso o item exista, exclui o item e remanja os demais
+        for i in range(posicao, self.ultima_posicao):
+          self.valores[i] = self.valores[i + 1]
+```
+Aqui vemos o por que se faz útil a atribuição do -1 na pesquisa caso o elemnto não exista no vetor, ele aparece noprimeiro `if` da função excluir. <br/>
+Com isso, para excluirmo o número 5 que foi anterioirmente adicionado, basta fazermos `vetor.excluir(5)`.
 
 ## Vetores Ordenados
 Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são armazenados em uma ordem específica pré definida, possuindo assim carateristicas particulares quanto a sua manipulação:
