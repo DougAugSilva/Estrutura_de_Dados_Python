@@ -146,7 +146,7 @@ O algoritmo de inserção se divide em quatro partes:
 Caso ainda restem duvidas, recomento o debug para a execução do algoritmo passo a passo pelo compilador.
 
 ### Funções de Pesquisa
-A grande vantagem de inserir uma relação de ordem na organização dos valores presenmtes na entradas de um vetor, é a facilidade da execução de buscas, na parte de comparação se tornará mais evidente a diferença, mas adiantando, vetores ordenados são recomendados em casos em que há muitas buscas por dados dentro do sistema, mas pouca inserção de novos dados. <br/>
+A grande vantagem de inserir uma relação de ordem na organização dos valores presenmtes na entradas de um vetor, é a facilidade da execução de buscas, na parte de comparação se tornará mais evidente essa diferença.  <br/>
 Para este tipo de vetor temos dois algoritmos de pesquisa, um semelhante oa visto para vetores não ordenados denominado *Pesquisa Linear*, e outro que se aproveita da ordenação dos elementos para uma maior eficiência computacional, chamado de *Pesquisa Binária*, amobos serão abordados agora.
 
 #### Pesquisa Linear
@@ -183,10 +183,10 @@ def pesquisa_binaria(self, valor):
           limite_superior = posicao_atual - 1
 ```
 Novamente, podemos analisar esta função em quatro partes:
-- Primeiro definimos os extremos do intervalo de pesquisa e verificamos se o valor da pesquisa é igual, maior ou menor a média deste intervalo. Sendo que caso o valor seja igual a média, paramos a pesquisa.
-- Caso o valor seja *maior* que a média do intervalo, restringimos o intervalo de pesquisa atualizando os limites do intervalo de busca, com o novo intervalo inferior sendo a máedia dos intervlaos
-- Caso o valor seja *menor* que a média dos intervalos, rrestringimos o intervalo de pesquisa atualizando agora o limite superior como senod a média dos intervalos
-- Respetimos o processo até isolarmos nosso valor em intervalos cada vez menores, até que a média do intervalo coincida com ele.
+1. Primeiro definimos os extremos do intervalo de pesquisa e verificamos se o valor da pesquisa é igual, maior ou menor a média deste intervalo. Sendo que caso o valor seja igual a média, paramos a pesquisa.
+2. Caso o valor seja *maior* que a média do intervalo, restringimos o intervalo de pesquisa atualizando os limites do intervalo de busca, com o novo intervalo inferior sendo a máedia dos intervlaos
+3. Caso o valor seja *menor* que a média dos intervalos, rrestringimos o intervalo de pesquisa atualizando agora o limite superior como senod a média dos intervalos
+4. Respetimos o processo até isolarmos nosso valor em intervalos cada vez menores, até que a média do intervalo coincida com ele.
 
 ### Função de Exclusão
 Dado que a função de exlcusão depende de uma função de pesquisa, podemos criar uma função de exclusão com a pesquisa linear e outra com a pesquisa binária. para este exemplo foi escolhida com a pesquias binária, mas basta substituirmos no algoritmo `pesquisa_binária(..)` por `pesquisa_linear(...)` para mudarmos de uma para a outra, sendo que a com pesquisa binária será computacionalmente mais eficiente.
@@ -194,9 +194,29 @@ Dado que a função de exlcusão depende de uma função de pesquisa, podemos cr
 def excluir(self,valor):
     posicao = self.pesquisar_binaria(valor)
     if posicao == -1:
-      return -1  #caso o item não exista no vetor, retorna -1
+      return -1  #caso o item não exista no vetor, retorna -1 
     else:
       for i in range(posicao, self.ultima_posicao):
         self.valores[i] = self.valores[i +1]  #caso exista, realiza o remanejamento dos valores
       self.ultima_posicao -= 1   #decrementa o valor das posições (diminui o tamanho do vetor)
 ```
+## Comparação entre vetores ordenados e Não ordenados
+Estas estrurturas e dados embora semelhantes, possuem suas devidas recomendações para tipos específicos de aplicações, em resunmo temos que: 
+- Vetores **não ordenados** são mais recomendados para aplicações em que temos muitas inserções de novos dados no sistemas, mas poucas buscas. Por exemplo o cadastro de preço de itens em um sistema de um supermercado.
+- Vetordes **ordenaos** são recomendados para aplicações onde temos muitas buscas nos sistemas, mas pouca inserção de novos dados, por exemplo um banco de dados com cadastros de novos funcionários.
+
+Outra diferença importante entre estes vetores é a presença da pesquis binária para o caso de vetores ordenados, já foi dito que esta é mais eficiente que a linear, mas o quanto mais eficiente? A tabela abaixo deixa mais notavel a diferença.
+
+| Faixa de Busca | Busca Binária | Busca Linear |
+|----------------|---------------|--------------|
+| 10             | 4             | 5            |
+| 100            | 7             | 50           |
+| 1.000          | 10            | 500          |
+| 10.000         | 14            | 5.000        |
+| 100.000        | 17            | 50.000       |
+| 1.000.000      | 20            | 500.000      |
+| 10.000.000     | 24            | 5.000.000    |
+| 100.000.000    | 27            | 50.000.000   |
+| 1.000.000.000  | 30            | 500.000.000  |
+
+A tabele acima mostra o número de passos de cada algortimo em ralação ao compriemnto do vetor, sendo que a busca linear realiza em média *n/2* passos em um vetor com *n* entradas. Note que fica evidente que para a pesquisa binária temos *O(ln)*, equanto para a pesquisa linear *O(n)*, sendo este o principal motivo por se investir tantos recursos no desenvolvimento de algoritmos ordenação de banco de dados, a grande eficiencia na busca de valores.
