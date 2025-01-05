@@ -6,7 +6,7 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Vetores Não Ordenados](#Vetores-Não-Ordenados)
 - [Vetores Ordenados](#Vetores-Ordenados)
 - [Pilhas](#Pilhas)
-- Filas
+- [Filas](#Filas)
 - Deques
 
 As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
