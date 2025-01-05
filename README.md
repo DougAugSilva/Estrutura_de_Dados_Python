@@ -274,3 +274,37 @@ def __pilha_vazia(self):
     else:
       return False
 ```
+
+### Função Empilhar
+Agora criada nossa pilha é preciso adicionar valores a ela, como temos acesso somente ao topo da pilha, sua fnç~çao de iserção não precisa de um mecanimos para remanejar os itens como em vetores, nem ordenalos, basta adicionarmos item após item como se estivessemos os *"empilhando"*.
+```python
+def empilhar(self, valor):
+    if self.__pilha_cheia():
+      print("A pilha está cheia")
+    else:
+      self.__topo += 1
+      self.__valores[self.__topo] = valor
+```
+Note que se fez necessário o uso da função `pilha_cheia()` previamente definida.
+
+### Função Desempilhar
+Caso precisemaos remover elementos de nossa pilha, faremos isso apenas manipulando seu topo, agora como se estivessemos *"desempilhando"* elemento a elemento.
+```python
+  def desempilhar(self):
+    if self.__pilha_vazia():
+      print("A pilha está vazia")
+    else:
+      self.__topo -= 1
+```
+Agora se fez necessária o uso da função `pilha_vazia()`.
+
+### Função Ver Topo
+Apesar de termos acesso somente ao topo da pilha, não signmifica que não possamos ter uma função de visualização. Assim como em uma pilha de papeis que podemos ler somente o papel que se encontar no topo, esta função nos dará somente o valor que estpá no topo da pilha.
+```python
+  def ver_topo(self):
+    if self.__topo != -1:
+      return self.__valores[self.__topo]
+    else:
+      return -1
+```
+
