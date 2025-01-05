@@ -276,7 +276,7 @@ def __pilha_vazia(self):
 ```
 
 ### Função Empilhar
-Agora criada nossa pilha é preciso adicionar valores a ela, como temos acesso somente ao topo da pilha, sua fnç~çao de iserção não precisa de um mecanimos para remanejar os itens como em vetores, nem ordenalos, basta adicionarmos item após item como se estivessemos os *"empilhando"*.
+Agora criada nossa pilha é preciso adicionar valores a ela, como temos acesso somente ao topo da pilha, sua função de iserção não precisa de um mecanimos para remanejar os itens como em vetores, nem ordenalos, basta adicionarmos item após item como se estivessemos os *"empilhando"*.
 ```python
 def empilhar(self, valor):
     if self.__pilha_cheia():
@@ -321,4 +321,5 @@ Também temos operações que podemos realizar em filas, são estas:
 - **Desenfikleirar:** Remove um elemento do início da fila.
 - **Ver Início:** Mostra o elemento que está no início da fila.
 
-Uma fila é uma estrutura de dados do tipo *FIFO* (First In, First Out), isto é, primeiro a entar é o primeiroa sair.
+Uma fila é uma estrutura de dados do tipo *FIFO* (First In, First Out), isto é, primeiro a entar é o primeiroa sair. Em filas teremos dois ponteiros de manipulação e leitura, sendo um para o inicío da fila e um para o final da fila, coom isso temos o conceito de *fila circular*, onde os os ponteiros de início e final da fila se movem entre as posições da fila, dispesando assim um remanejamento dos itens, porem podemos ter a inverção dos ponteiro de inicio e final da fila, podendo em alguns casos o inico está a direita do ponteiro de final e vice versa.
+
