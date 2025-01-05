@@ -238,5 +238,21 @@ As operações que podemos realizar na manipulação de pilhas que serão aborda
 - Desempuilhar: Remover um item de dados do topo da pilha
 - Ver o Topo: Mostar o elemento que está no topo da pilha.
 
-Uma puilha é uma estrutura de dados do tipo *LIFO* (Last in First Out), isto é, O último elemento a ser inserido é o primeiro a elemnto a ser retirado.
+Uma pilha é uma estrutura de dados do tipo *LIFO* (Last in First Out), isto é, O último elemento a ser inserido é o primeiro a elemnto a ser retirado.
+
+### Definido a Classe e o Objeto
+Primeiro vamos definir a classe e o objeto, para isso será uilizado novamente o pacote *numpy*. Assim como no caso dos vetores, as entradas serão definidas como inteiros positivos.
+```python
+import numpy as np
+
+class Pilha:  #define a classe
+  def __init__(self, capacidade):
+    self.__capacidade = capacidade  #define a capacidade da pilha
+    self.__topo = -1  #define o topo da pilha
+    self.__valores = np.empty(self.__capacidade, dtype = int)  #pilha com dados inteiros
+```
+Como algumas não há a necessidade do usuario ter acessoa a algumas funções, colocamos "__" antes da definição para restringir seu acesso pelo usuário.
+
+
+
 
