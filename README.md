@@ -253,6 +253,24 @@ class Pilha:  #define a classe
 ```
 Como algumas não há a necessidade do usuario ter acessoa a algumas funções, colocamos "__" antes da definição para restringir seu acesso pelo usuário.
 
+### Funções de Verificação
+Será de grande utilidade ter informações sobre como se encontra a capácidade de armazenamento da pilha, para assim sabermops se ainda é possivel adicionar maisa itens ou realizar certas operações. Dado que estas funções servirão de base para criação de outras posteriormente, o usuario não precisa ter acesso direto a elas, com isso em ambas será adicionado "__" para restringir seu acesso.
 
-
-
+#### Função Pilha Cheia
+Esta nos diz se ainda é possivel adicionarmos elementos na pilha, verificando se ainda existem posiçõs sem valores atribuidos.
+```python
+  def __pilha_cheia(self): 
+    if self.__topo == self.__capacidade - 1:
+      return True
+    else:
+      return False
+```
+#### Função Pilha Vazia
+Esta função verifica se há elementos na pilha, ela é util por exemplo para pararmos um algoritmo que retira elementos da pilha.
+```python
+def __pilha_vazia(self):
+    if self.__topo == -1:
+      return True
+    else:
+      return False
+```
