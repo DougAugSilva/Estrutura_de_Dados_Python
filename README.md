@@ -234,9 +234,9 @@ Pilhas são um aestruturas de dados com um acesso diferente aos seu itnes, ele p
 - Arquitetura de microprocessadores
 
 As operações que podemos realizar na manipulação de pilhas que serão abordadas aqui são:
-- Empilhar: Colocar um item de dados mo topo da pilha
-- Desempuilhar: Remover um item de dados do topo da pilha
-- Ver o Topo: Mostar o elemento que está no topo da pilha.
+- **Empilhar:** Colocar um item de dados mo topo da pilha
+- **Desempuilhar:** Remover um item de dados do topo da pilha
+- **Ver o Topo:** Mostar o elemento que está no topo da pilha.
 
 Uma pilha é uma estrutura de dados do tipo *LIFO* (Last in First Out), isto é, O último elemento a ser inserido é o primeiro a elemnto a ser retirado.
 
@@ -308,3 +308,17 @@ Apesar de termos acesso somente ao topo da pilha, não signmifica que não possa
       return -1
 ```
 
+## Filas
+
+### Teoria
+Assim como em filas que encontramos em bancos e padarias, a fila como estrutura de dados segue alguns aspectos semelhantes a estas, como por exemplo primeiro elemento a aser inserido na fila será o primeiro a ser removido da fila. Algumas das aplicações das filas são:
+- Modelar aviões aguardando a decolagem.
+- Pacoites de dados que esperam ser transmitidos em uma rede.
+- Fila de documentos para impressão de uma impressora.
+
+Também temos operações que podemos realizar em filas, são estas:
+- **Enfileirar:** Coloca um item no final da fila.
+- **Desenfikleirar:** Remove um elemento do início da fila.
+- **Ver Início:** Mostra o elemento que está no início da fila.
+
+Uma fila é uma estrutura de dados do tipo *FIFO* (First In, First Out), isto é, primeiro a entar é o primeiroa sair.
