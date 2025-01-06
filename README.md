@@ -6,8 +6,9 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Vetores Não Ordenados](#Vetores-Não-Ordenados)
 - [Vetores Ordenados](#Vetores-Ordenados)
 - [Pilhas](#Pilhas)
-- [Filas](#Filas)
-- [Deques](#Deques)
+- [Filas Circulares](#Filas-Circulares)
+- [Filas de Prioridade](#Filas-de-Prioridade)
+- Deques
 
 As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
@@ -308,7 +309,7 @@ Apesar de termos acesso somente ao topo da pilha, não signmifica que não possa
       return -1
 ```
 
-## Filas
+## Filas Circulares
 
 ### Teoria
 Assim como em filas que encontramos em bancos e padarias, a fila como estrutura de dados segue alguns aspectos semelhantes a estas, como por exemplo primeiro elemento a aser inserido na fila será o primeiro a ser removido da fila. Algumas das aplicações das filas são:
@@ -394,4 +395,4 @@ Antes de darmos continuidades as demais estruturas de dados, é importante notar
 - o ponteiro que indica a posição dos valores do **inicio da fila** só se move quando **retirando elementos da fila**.
 - o ponteiro que indica a posição dos valores do **final da fila** só se move quando **adicionando elmentos da fila**.
 
-## Deques
+## Filas de Prioridade
