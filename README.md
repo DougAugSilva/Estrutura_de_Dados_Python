@@ -323,3 +323,33 @@ Também temos operações que podemos realizar em filas, são estas:
 
 Uma fila é uma estrutura de dados do tipo *FIFO* (First In, First Out), isto é, primeiro a entar é o primeiroa sair. Em filas teremos dois ponteiros de manipulação e leitura, sendo um para o inicío da fila e um para o final da fila, coom isso temos o conceito de *fila circular*, onde os os ponteiros de início e final da fila se movem entre as posições da fila, dispesando assim um remanejamento dos itens, porem podemos ter a inverção dos ponteiro de inicio e final da fila, podendo em alguns casos o inico está a direita do ponteiro de final e vice versa.
 
+### Definido a Classe e o Objeto
+Na criação da fila vamos ter que inserir além da variavel de capacidade de armazenamento e dos valores, as variaveis dos ponteiros que farão a leitura dos elementos na posição inicial e final da fila. Para tal vamos importar a bibliota *numpy* e executar o código abaixo.
+```python
+import numpy as np
+
+class FilaCircular:
+  
+  def __init__(self,capacidade):
+    self.capacidade = capacidade
+    self.inicio = 0  #seta o ponetiro de leitura do inico
+    self.final = -1  #seta o ponteiro de leitura do final
+    self.numero_elementos = 0
+    self. valores = np.empty(self.capacidade, dtype = int) #cria o vetor do tipo np array com entradas inteiras
+```
+
+### Definindo Funções Auxiliares
+Neste passo vamos defeinir de uma vez algumas funções que nos serão uteis, mas que não precisam ter seu acesso liberado ao usuário, apenas nos serão uteis para a criação das demias funções.
+```python
+ #função que verifica se a fila está vazia
+  def __fila_vazia(self):
+    return self.numero_elementos == 0  #se o numero de eleemnto for 0, a fila está vazia
+
+ #função que verifica se a fila está cheia 
+  def __fila_cheia(self):
+    return self.numero_elementos == self.capacidade
+```
+
+### Função Enfileirar
+
+
