@@ -402,7 +402,9 @@ Assim como em filas circulares, filas com prioridade também são estruturas de 
 - A cada item ordenado é atribuido um *peso*, de modo que itens com pesos maiores/menores possuem *prioridade* sobre os demais.
 - Elementos com alta prioridade são colocados no início da fila, com média prioridade no meio da fila e com baixa prioridade no final da fila.
 
+Dado a estrutura das filas com prioridade, as unicas funções que se alteram em comparação com as fils circulares são a função `enfileirar()` e a função `desenfileirar()`, deste modo podemos aproveitar as outras funções da seção anmterior.
 
+### Função Enfileirar
 
 
 
