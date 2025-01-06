@@ -122,7 +122,7 @@ vetor = VetorOrdenado(5)  #exemplo: Criando um vetor de 5 entradas
 ```
 
 ### Função de Inserção
-Esta é a função mais complexa até agora, como dito anteriormente, é ela que diferencia entre os dois tipos de vetores. Sua complexidade se dá pelo fato de que não podemos inserir um novo valor de qualquer maneira em um vetor ordenado, somente rearranjando os itens para liberar espaço como no caso do não ordenado, a medida que adicionamos novos itens precisasmos respeitar a ordenação vigente, sendo esta crescente, decrescente ou alfabétioca casop trabalhemos com strings. <br/>
+Esta é a função mais complexa até agora. Sua complexidade se dá pelo fato de que não podemos inserir um novo valor de qualquer maneira em um vetor ordenado, a medida que adicionamos novos itens precisasmos respeitar a ordenação vigente, sendo esta crescente, decrescente ou alfabética caso trabalhemos com strings. <br/>
 Para este exemplo com entradas sendo inteiros positivos, vamos trabalhar com a ordenação na forma crescente, o algoritmo será exposto e posteriormente explicado suas nuancias.
 ```python
  def insere(self, valor):   #esta parte do código é semelhante a do vetor não ordenado
