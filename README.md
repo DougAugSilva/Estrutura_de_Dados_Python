@@ -7,7 +7,7 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Vetores Ordenados](#Vetores-Ordenados)
 - [Pilhas](#Pilhas)
 - [Filas](#Filas)
-- Deques
+- [Deques](#Deques)
 
 As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
@@ -394,3 +394,4 @@ Antes de darmos continuidades as demais estruturas de dados, é importante notar
 - o ponteiro que indica a posição dos valores do **inicio da fila** só se move quando **retirando elementos da fila**.
 - o ponteiro que indica a posição dos valores do **final da fila** só se move quando **adicionando elmentos da fila**.
 
+## Deques
