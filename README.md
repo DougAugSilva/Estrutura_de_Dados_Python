@@ -396,3 +396,13 @@ Antes de darmos continuidades as demais estruturas de dados, é importante notar
 - o ponteiro que indica a posição dos valores do **final da fila** só se move quando **adicionando elmentos da fila**.
 
 ## Filas de Prioridade
+
+### Teoria
+Assim como em filas circulares, filas com prioridade também são estruturas de dados do tipo *FIFO* (First In, First Out), porém agora temos algumas propriedades adicionais:
+- A cada item ordenado é atribuido um *peso*, de modo que itens com pesos maiores/menores possuem *prioridade* sobre os demais.
+- Elementos com alta prioridade são colocados no início da fila, com média prioridade no meio da fila e com baixa prioridade no final da fila.
+
+
+
+
+
