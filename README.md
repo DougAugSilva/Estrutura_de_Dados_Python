@@ -410,6 +410,35 @@ Assim como em filas circulares, filas com prioridade também são estruturas de 
 Dado a estrutura das filas com prioridade, as unicas funções que se alteram em comparação com as fils circulares são a função `enfileirar()` e a função `desenfileirar()`, deste modo podemos aproveitar as outras funções da seção anmterior.
 
 ### Função Enfileirar
+Neste caso será preciso inserir um mecanismo de remanejamento semelhante ao presente nos *vetores*, para assim podermos inserir itens em suas devidas posições conforme suas prioridades. neste exemplo colocaremos uma prioridade maior para os números menores.
+```python
+ def enfileirar(self, valor):
+    if self.__fila_cheia():  #caso a fila esteja cheia, retorna que a fila está cheia
+      print("A fila está cheia")
+      return
+    if self.numero_elementos == 0:  #caso a fila esteja vazia
+      self.valores[self.numero_elementos] = valor
+      self.numero_elementos += 1
+    else:  #caso a fila não esteja vazia
+      x = self.numero_elementos -1  #criamos a varialvel x para ser o ponteiro de remanejarmos os elementos
+      while x >= 0:  #enquanto o ponteiro não ficar na primeira posição
+        if valor > self.valores[x]:  #caso o valor inserido seja maior que o valor na posição x
+          self.valores[x + 1] = self.valores[x]  #realizamos o remanejamento
+        else:  #caso contrário, podemos parar o código
+          break
+        x -=1  #depois decrementamos o valor de x
+      self.valores[x + 1] = valor  #inserimos a valor na devida posição  
+      self.numero_elementos += 1  #aumentamos o número de elementos da fila
+```
 
-
-
+### Função Desenfileirar
+Já a função desenfileirar se torna mais simples neste caso, a ordenação dos elementos na fila dispensa um ponteiro de leirura para os itens no inio da fila, os itens a sair primeiro já se encontram organizados dentro da fila por conta da função de inserção, bastando apenas assim verificarmos se há elemntos na fila e removermos o elemnto mais a direita da fila.
+```python
+def desenfileirar(Self):
+    if self.__fila_vazia():  #caso a fila esteja vazia
+      print("A fila está vazia")
+      return
+    valor = self.valores[self.numero_elementos -1] 
+    self.numero_elementos -= 1 
+    return valor  #caso contrário remove o primeiro elemento da fila e o retorna
+```
