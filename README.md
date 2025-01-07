@@ -13,7 +13,7 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Filas Circulares](#Filas-Circulares)
 - [Filas de Prioridade](#Filas-de-Prioridade)
 - [Deques](#Deques)
-- Listas Encadeadas
+- [Listas Encadeadas](#Listas-Encadeadas)
 - Árvores
 - Grafos
 
@@ -582,5 +582,6 @@ Falta apenas funções para visualisarmos quais fvalores estão nas posição in
     return self.valores[self.final]
 ```
 
-
-
+## Listas Encadeadas
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
+### Teoria
