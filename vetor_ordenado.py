@@ -69,19 +69,3 @@ class VetorOrdenado:
       for i in range(posicao, self.ultima_posicao):
         self.valores[i] = self.valores[i +1]  #caso exista, realiza o remanejamento dos valores
       self.ultima_posicao -= 1   #decrementa o valor das posições (diminui o tamanho do vetor)
-
-#testando funções
-vetor = VetorOrdenado(5)
-
-vetor.insere(5)
-vetor.insere(9)
-vetor.insere(2)
-vetor.insere(8)
-vetor.insere(1)
-vetor.imprime()
-
-vetor.excluir(5)
-vetor.imprime()
-
-vetor.pesquisa_linear(8)
-vetor.pesquisa_binaria(2)
