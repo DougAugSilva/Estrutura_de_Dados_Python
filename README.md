@@ -564,7 +564,7 @@ def excluir_final(self):
 ### Funções de Retorno
 Falta apenas funções para visualisarmos quais fvalores estão nas posição inicila e na posição final do deque, são funções simples e sua sintaze segue abaixo;
 
-#### Get Inicio
+#### Retorna o Inicio
 ```python
   def get_inicio(self):
     if self.__deque_vazio():
@@ -573,7 +573,7 @@ Falta apenas funções para visualisarmos quais fvalores estão nas posição in
     return self.valores[self.inicio]   
 ```
 
-#### Get Final
+#### Retorna o Final
 ```python
   def get_final(self): 
     if self.__deque_vazio() or self.final < 0: #uma condição a mais por segurança
