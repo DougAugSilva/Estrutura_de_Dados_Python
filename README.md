@@ -13,7 +13,9 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Filas Circulares](#Filas-Circulares)
 - [Filas de Prioridade](#Filas-de-Prioridade)
 - [Deques](#Deques)
-- [Listas Encadeadas](#Listas-Encadeadas)
+- [Listas Encadeadas Simples](#Listas-Encadeadas-Simples)
+- Listas Encadeadas Extremidades Duplas
+- Listas Duplamente Encadeadas
 - Árvores
 - Grafos
 
@@ -582,7 +584,7 @@ Falta apenas funções para visualisarmos quais fvalores estão nas posição in
     return self.valores[self.final]
 ```
 
-## Listas Encadeadas
+## Listas Encadeadas Simples
 [voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
 ### Teoria
 As *listas encadeadaas* são estruras de dados que funcionam de maneira diferente ao que foi visto até então, enquando as aestruturas de dados aboradas até agora se baseiam em vetores, com um certo número de entradas pré determinado e indices para indicar suas posiçõs, listas encadeadas são estruturadas atravéz de *nós*, e surgiram a para tentar contiornar algumas desvantagens dos vetores.
