@@ -5,21 +5,20 @@
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:douglasaugustosilva323@gmail.com)
 
 ## Introdução
-Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
+Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplos de aplicaçõo do conteudo abordado no curso. <br/>
+No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, neste repositório serão aboradas as estruturas de dados baseadas em vetores, também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
+### Sumário
 - [Vetores Não Ordenados](#Vetores-Não-Ordenados)
 - [Vetores Ordenados](#Vetores-Ordenados)
 - [Pilhas](#Pilhas)
 - [Filas Circulares](#Filas-Circulares)
 - [Filas de Prioridade](#Filas-de-Prioridade)
 - [Deques](#Deques)
-- [Listas Encadeadas Simples](#Listas-Encadeadas-Simples)
-- Listas Encadeadas Extremidades Duplas
-- Listas Duplamente Encadeadas
-- Árvores
-- Grafos
 
-Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
+### Vetores
+Vetores são estruturas de dados baseadas no *posicionamento* dos dados que a compõe, cada dado no vetor ocupa uma certa posição e lhe é atribuido um certo índice, sendo que para acessar um determinado dado precisamos de seu indice para localiza-lo no vetor. <br/>
+O tamanho de um vetor corresponde a quantidade de entrada para dados presentes nele, coincidindo assim com o numero de indices, os vetores que trabalharemos neste repositório possuem um tamanho fixo e pré determinado, porem existe há possibilidade de trabalharmos com vetore *dinâmicos*, ao qual o seu tamanho dop vetor se altera ao longo do código.
 
 ## Vetores Não Ordenados
 
@@ -583,37 +582,3 @@ Falta apenas funções para visualisarmos quais fvalores estão nas posição in
       return
     return self.valores[self.final]
 ```
-
-## Listas Encadeadas Simples
-[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
-### Teoria
-As *listas encadeadaas* são estruras de dados que funcionam de maneira diferente ao que foi visto até então, enquando as aestruturas de dados aboradas até agora se baseiam em vetores, com um certo número de entradas pré determinado e indices para indicar suas posiçõs, listas encadeadas são estruturadas atravéz de *nós*, e surgiram a para tentar contiornar algumas desvantagens dos vetores.
-
-**Principais Desvantagens dos Vetores:**
-- Em um vetor não ordenado, a função de busca é lento.
-- Em um vetor ordenado, a função de inserção é lenmta.
-- Em qualquer vetor, mesmos as entradas vazias (sem valores atribuidops) ocupam espaço na memória, isto é, um vetor com 100 entradas mas contendo apenas 5 valores, ocupa um espaço na memória de 100 entradas.
-
-Agora nas listas encadeadas cada valor de dado é incorporado em um nó, cada nó possui uma referencia a ao próximo item da lista, como se fosse uma coordenada de como encontra-lo, com isso temos a *cabeça* da lista que é o nó que não é referanciado por nenhum anterior a ele, e a *cauda* da lista que é um nó que não faz referencia anenhum outro nó.
-- Cada elemento da lista é aramzeando em um nó que será definifo como um objeto.
-- Cada elemento da lista faz referncia ao prócimo e só será remanejado se necessário.
-- Será criado o objeto *cabeça da lista* para fazermos referéncia o primreiro nó da lista.
-
-**Principais Diferenças Entre Listas e Vetores:**
-
-**Vetor:** É uma estrutura de posicionamento dos dados.
-- Cada elemento ocupa uma certa posição e lhe é atribuidop um certo indice.
-- Cada posição pode ser acessada pelo seu indice.
-
-**Lista:** É uma estrutura de relacionamento dos dados.
--  A única maneira de se chjegar a um elemento é seguindo a sequêncai de elementos.
--  Cada item de dados não pode ser acessado de forma direto, ou seja, a relação entre eles deve ser utilizada pra isso.
--  Iniciamos no primeiro item, depois para o segundo, e assim por diante, atpé encontrarmos o item desejado, realizando uma pesquisa linear.
-
-As funções que vamos trabalhar com listas encadadas são:
-- Inserve no Início
-- Excluir no Início
-- Mostar Lista
-- Pesquisar
-- Excluir da Posição
-
