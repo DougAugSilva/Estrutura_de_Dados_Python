@@ -608,3 +608,10 @@ Agora nas listas encadeadas cada valor de dado é incorporado em um nó, cada n�
 -  Cada item de dados não pode ser acessado de forma direto, ou seja, a relação entre eles deve ser utilizada pra isso.
 -  Iniciamos no primeiro item, depois para o segundo, e assim por diante, atpé encontrarmos o item desejado, realizando uma pesquisa linear.
 
+As funções que vamos trabalhar com listas encadadas são:
+- Inserve no Início
+- Excluir no Início
+- Mostar Lista
+- Pesquisar
+- Excluir da Posição
+
