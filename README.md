@@ -442,3 +442,7 @@ def desenfileirar(Self):
     self.numero_elementos -= 1 
     return valor  #caso contrário remove o primeiro elemento da fila e o retorna
 ```
+
+## Deques 
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
+### Teoria
