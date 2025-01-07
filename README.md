@@ -585,3 +585,26 @@ Falta apenas funções para visualisarmos quais fvalores estão nas posição in
 ## Listas Encadeadas
 [voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
 ### Teoria
+As *listas encadeadaas* são estruras de dados que funcionam de maneira diferente ao que foi visto até então, enquando as aestruturas de dados aboradas até agora se baseiam em vetores, com um certo número de entradas pré determinado e indices para indicar suas posiçõs, listas encadeadas são estruturadas atravéz de *nós*, e surgiram a para tentar contiornar algumas desvantagens dos vetores.
+
+**Principais Desvantagens dos Vetores:**
+- Em um vetor não ordenado, a função de busca é lento.
+- Em um vetor ordenado, a função de inserção é lenmta.
+- Em qualquer vetor, mesmos as entradas vazias (sem valores atribuidops) ocupam espaço na memória, isto é, um vetor com 100 entradas mas contendo apenas 5 valores, ocupa um espaço na memória de 100 entradas.
+
+Agora nas listas encadeadas cada valor de dado é incorporado em um nó, cada nó possui uma referencia a ao próximo item da lista, como se fosse uma coordenada de como encontra-lo, com isso temos a *cabeça* da lista que é o nó que não é referanciado por nenhum anterior a ele, e a *cauda* da lista que é um nó que não faz referencia anenhum outro nó.
+- Cada elemento da lista é aramzeando em um nó que será definifo como um objeto.
+- Cada elemento da lista faz referncia ao prócimo e só será remanejado se necessário.
+- Será criado o objeto *cabeça da lista* para fazermos referéncia o primreiro nó da lista.
+
+**Principais Diferenças Entre Listas e Vetores:**
+
+**Vetor:** É uma estrutura de posicionamento dos dados.
+- Cada elemento ocupa uma certa posição e lhe é atribuidop um certo indice.
+- Cada posição pode ser acessada pelo seu indice.
+
+**Lista:** É uma estrutura de relacionamento dos dados.
+-  A única maneira de se chjegar a um elemento é seguindo a sequêncai de elementos.
+-  Cada item de dados não pode ser acessado de forma direto, ou seja, a relação entre eles deve ser utilizada pra isso.
+-  Iniciamos no primeiro item, depois para o segundo, e assim por diante, atpé encontrarmos o item desejado, realizando uma pesquisa linear.
+
