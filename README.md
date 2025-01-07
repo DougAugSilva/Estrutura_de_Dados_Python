@@ -5,7 +5,7 @@
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:douglasaugustosilva323@gmail.com)
 
 ## Introdução
-Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo ue neste repósitório será aborado:
+Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algoritmos em Python*, e tem como objetivo expor os conteudos nele apresentados, visando assim servir de guia para futuros projetos e de exemplo de aplicação do conteudo abordado no curso. No curso são vistas as pricipais estruturas de dados presentes na linguagem de programação Python, sendo estas:
 
 - [Vetores Não Ordenados](#Vetores-Não-Ordenados)
 - [Vetores Ordenados](#Vetores-Ordenados)
@@ -13,8 +13,11 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 - [Filas Circulares](#Filas-Circulares)
 - [Filas de Prioridade](#Filas-de-Prioridade)
 - [Deques](#Deques)
+- Listas Encadeadas
+- Árvores
+- Grafos
 
-As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
+Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
 ## Vetores Não Ordenados
 [voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
