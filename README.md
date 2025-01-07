@@ -454,4 +454,114 @@ Deque é uma sigla que significa *"Double Ended Queue"*, isto é, se trata de um
 - Excluir do início
 - Excluir do final
 
-Seno que podemos implementar estas operações de forma *estática* ou *circular*. 
+Sendo que podemos implementar estas operações de forma *estática* ou *circular*. Será abordada a forma circular para um deque, forma na qual os elementos de inicio e fim circulam dentro do vetor, por meio de mudanças nos ponteiros de inicío e fim.
+
+### Definindo a Classe e o Objeto
+Vamos também definir nesta parte as funções auxiliares que servirão de base para a criação das demais.
+```python
+import numpy as np
+
+class Deque:
+  def __init__(self, capacidade):
+    self.capacidade = capacidade
+    self.inicio = -1
+    self.final = 0
+    self.numero_elementos = 0
+    self.valores = np.empty(self.capacidade, dtype = int)
+
+  def __deque_cheio(self):
+    return (self.inicio == 0 and self.final == self.capacidade - 1) or (self.inicio == self.final + 1)
+
+  def __deque_vazio(self):
+    return self.inicio == -1
+```
+
+### Funções de Inserção 
+Aqui podemos criar uma função que irá inserir intens no inicio do deque, e uma função para inserir itens no final do deque.
+
+#### Função Insere Início
+Primeiro vamos verificar se a fila está cheia, caso não esteja é preciso verificar se o início está na primeira posição, setamos ele para ulrima casa do vetor para assim inserirmos o valor, caso contrario apenas inserimos o valor na casa subsequente.
+```python
+ def insere_inicio(self, valor):
+    if self.__deque_cheio():
+      print("O deque está cheio")
+      return
+    #caso o deque esteja vazio
+    if self.inicio == -1:
+      self.inicio = 0
+      self.final = 0
+    #caso o início esteja na primeira posição
+    elif self.inicio == 0:
+      self.inicio = self.capacidade - 1
+    #caso não
+    else:
+      self.inicio -= 1
+    self.valores[self.inicio] = valor
+```
+
+#### Função Insere Final
+De forma semelhante, segue a função que insere valores no final do deque:
+```python
+ def insere_final(self, valor):
+    if self.__deque_cheio():
+      print("O deque está cheio")
+      return
+    #caso o deque esteja vazio
+    if self.inicio == -1:
+      self.inicio = 0
+      self.final = 0
+    #caso o dinal esteja na última posição
+    elif self.final == self.capacidade - 1:
+      self.final = 0
+    else:
+      self.final += 1
+    self.valores[self.inicio] = valor
+```
+
+### Funções de Exclusão
+Assim como temos duas funções de inserção, podemos ter duas funções de exclusão, e desde modo manipularmos de forma completa o inicio e o final do deque.
+
+#### Função Excluir Inicío
+Desta vez verificamos se o deque está vazio para sabermos e ainda há itens a serem removidos, depois verificamos se o deque possui apenas um único elemento para assim podermos setar os ponteiros de início e fim. 
+```python
+def excluir_inicio(self):
+    if self.__deque_vazio():
+      print("O deque já está vazio")
+      return
+    #caso possua somente um elemnto no deque
+    if self.inicio == self.final:
+      self.inicio = -1
+      self.final = -1
+    else:
+      #volta para a posição inicial
+      if self.inicio == self.capacidade - 1:
+        self.inicio = 0
+      else:
+        #vamos incrementar o novo início para removermos o início atual
+        self.inicio += 1
+```
+
+#### Função Excluir Final
+Bem parecida coma função de excluir o início, mudando a parte de decrementarmos o novo final e o ajuste do ponteiro de final para a poisção final caso o inicio esteja na posição inícial.
+```python
+def excluir_final(self):
+    if self.__deque_vazio():
+      print("O deque já está vazio")
+      return
+    #caso possua somente um elemento
+    if self.inicio == self.final:
+      self.inicio = -1
+      self.final = -1
+    else:
+      #volta para a posição final
+      if self.inicio == 0:
+        self.final = self.capacidade - 1
+      else:
+        #vamos decrementar o novo final para removermos o final atual
+        self.final -= 1
+```
+
+### Funções de Retorno
+
+
+
