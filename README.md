@@ -17,6 +17,7 @@ Este repositório segue de notas das aulas do curso *Estrutura de Dados e Algori
 As demaios estrururas como Listas Encadeadas, Árvores e Grafos serão aborados em outro repositório. Também serão vistos algoritmos de criação e manipulação destas estruras de dados, bem como o básico de programção orientada a objetos e *big O notation* para a avaliação do comportamento assintótico dos algoritmos.
 
 ## Vetores Não Ordenados
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python/edit/main/README.md#introdu%C3%A7%C3%A3o)
 
 ### Teoria
 Vetores não ordenados são uma estrutura de dados que armazena dados sem uma ordem específica, um vetor não ordenado possui caracteristicas particuylares com relação a sua construção e manipulação:
@@ -89,7 +90,7 @@ Aqui vemos o por que se faz útil a atribuição do -1 na pesquisa caso o elemnt
 Com isso, para excluirmo o número 5 que foi anterioirmente adicionado, basta fazermos `vetor.excluir(5)`.
 
 ## Vetores Ordenados
-
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python/edit/main/README.md#introdu%C3%A7%C3%A3o)
 ### Teoria
 Vetores ordenados são semelhantes aos Não Ordenados, porem agora os dados são armazenados em uma ordem específica pré definida, possuindo assim carateristicas particulares quanto a sua manipulação:
 - Toda vez que formos inserir um item no vetor, precisaremos fazer uma pesquisa sobre os demais itens para ainserção respeitar a ordenação do vetor.
@@ -230,7 +231,7 @@ Outra diferença importante entre estes vetores é a presença da pesquis binár
 A tabele acima mostra o número de passos de cada algortimo em ralação ao compriemnto do vetor, sendo que a busca linear realiza em média *n/2* passos em um vetor com *n* entradas. Note que fica evidente que para a pesquisa binária temos *O(ln)*, equanto para a pesquisa linear *O(n)*, sendo este o principal motivo por se investir tantos recursos no desenvolvimento de algoritmos ordenação de banco de dados, a grande eficiencia na busca de valores.
 
 ## Pilhas
-
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python/edit/main/README.md#introdu%C3%A7%C3%A3o)
 ### Teoria
 Pilhas são um aestruturas de dados com um acesso diferente aos seu itnes, ele permite acesso somente ao último item inserido, sendo necessário remover este para aacessar o próximo item (no caso o penultimo item inserido), e asssim por diante. Existem várias aplicações que são utilizads pilhas, como por exemplo:
 - Correeção de expreções aritméticas
@@ -314,7 +315,7 @@ Apesar de termos acesso somente ao topo da pilha, não signmifica que não possa
 ```
 
 ## Filas Circulares
-
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python/edit/main/README.md#introdu%C3%A7%C3%A3o)
 ### Teoria
 Assim como em filas que encontramos em bancos e padarias, a fila como estrutura de dados segue alguns aspectos semelhantes a estas, como por exemplo primeiro elemento a aser inserido na fila será o primeiro a ser removido da fila. Algumas das aplicações das filas são:
 - Modelar aviões aguardando a decolagem.
@@ -400,7 +401,7 @@ Antes de darmos continuidades as demais estruturas de dados, é importante notar
 - o ponteiro que indica a posição dos valores do **final da fila** só se move quando **adicionando elmentos da fila**.
 
 ## Filas de Prioridade
-
+[voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python/edit/main/README.md#introdu%C3%A7%C3%A3o)
 ### Teoria
 Assim como em filas circulares, filas com prioridade também são estruturas de dados do tipo *FIFO* (First In, First Out), porém agora temos algumas propriedades adicionais:
 - A cada item ordenado é atribuido um *peso*, de modo que itens com pesos maiores/menores possuem *prioridade* sobre os demais.
