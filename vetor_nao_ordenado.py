@@ -33,18 +33,4 @@ class VetorNaoOrdenado:  #define a classe de vetor não ordenado
       else: #caso o item exista, exclui o item e remanja os demais
         for i in range(posicao, self.ultima_posicao):
           self.valores[i] = self.valores[i + 1]
-#testando funções
-vetor = VetorNaoOrdenado(5)
-
-vetor.insere(5)
-vetor.insere(9)
-vetor.insere(2)
-vetor.insere(8)
-vetor.insere(1)
-vetor.imprime()
-
-vetor.excluir(5)
-vetor.imprime()
-
-vetor.pesquisar(8)
 
