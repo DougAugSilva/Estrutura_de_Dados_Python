@@ -448,3 +448,10 @@ def desenfileirar(Self):
 ## Deques 
 [voltar ao topo](https://github.com/DougAugSilva/Estrutura_de_Dados_Python?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
 ### Teoria
+Deque é uma sigla que significa *"Double Ended Queue"*, isto é, se trata de uma fila que temos acoesso agora aos seus dois extremos, como um deque de cartas em que podemos retirar uma carta da parte de sima ou de baixo do deque. Um Deque suporta operações tanto de filas quanto de pilhas, sendo muito usado em algoritmos de programação paraleala em processadores Intel por exemplo. As operações que podem sera realizadas são:
+- Adicionar ao início
+- Adicionar no final
+- Excluir do início
+- Excluir do final
+
+Seno que podemos implementar estas operações de forma *estática* ou *circular*. 
