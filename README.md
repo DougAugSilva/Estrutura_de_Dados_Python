@@ -1,4 +1,4 @@
-# Estruturas de Dados Baseadas em Vetores com Python
+# Estruturas de Dados Baseadas em Vetores no Python
 #### Douglas Augusto da Silva
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dougaugsilva/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DougAugSilva)
