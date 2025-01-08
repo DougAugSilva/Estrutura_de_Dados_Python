@@ -326,7 +326,7 @@ Assim como em filas que encontramos em bancos e padarias, a fila como estrutura 
 
 Também temos operações que podemos realizar em filas, são estas:
 - **Enfileirar:** Coloca um item no final da fila.
-- **Desenfikleirar:** Remove um elemento do início da fila.
+- **Desenfileirar:** Remove um elemento do início da fila.
 - **Ver Início:** Mostra o elemento que está no início da fila.
 
 Uma fila é uma estrutura de dados do tipo *FIFO* (First In, First Out), isto é, primeiro a entrar é o primeiro a sair. Em filas teremos dois ponteiros de manipulação e leitura, sendo um para o início da fila e um para o final da fila, com isso temos o conceito de *fila circular*, onde os os ponteiros de início e final da fila se movem entre as posições da fila, dispensando assim um remanejamento dos itens, porém podemos ter a inversão dos ponteiro de início e final da fila, podendo em alguns casos o início está à direita do ponteiro de final e vice versa.
